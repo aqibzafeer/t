@@ -5,4 +5,4 @@ export const NAV_LINKS = [
   { href: "/contact", label: "Contact" },
 ];
 
-export const SHOP_LINK = { href: "/shop", label: "Shop Now" };
+export const SHOP_LINK = { href: "/products", label: "Shop Now" };
