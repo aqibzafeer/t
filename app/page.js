@@ -25,19 +25,68 @@ export default function Home() {
         </div>
       </div>
 
+ 
+ 
       {/* About Section */}
       <section className="w-full bg-gray-50 py-16 px-6 md:px-16">
+
+
+
+
+
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          
+          
+                    <div className="flex justify-center">
+            <img
+              src="/about.webp"
+              alt="Our Products"
+              className="rounded-2xl shadow-lg w-full  object-cover"
+            />
+          </div>
+
+
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold text-red-800 mb-4">
+              About Us
+            </h2>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              At Ambala Tea, we believe wellness starts with a single sip. Our teas are crafted
+              with nature’s finest herbs, providing the nourishment your body needs to thrive
+              every day.
+              Our wellness journeys begin as small steps which become straightforward over time. 
+              Regular consumption of two cups of Ambala Tea every day assists in supporting your health foundation.
+            </p>
+          </div>
+
+
+  
+        </div>
+      </section>
+ 
+ 
+      {/* About Section */}
+      <section className="w-full bg-gray-50 py-16 px-6 md:px-16">
+
+
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-emerald-700 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-red-800 mb-4">
               Our Story
             </h2>
             <p className="text-gray-700 text-lg leading-relaxed">
               At Ambala Tea, we believe wellness starts with a single sip. Our teas are crafted
               with nature’s finest herbs, providing the nourishment your body needs to thrive
               every day.
+
+
+              Our wellness journeys begin as small steps which become straightforward over time. 
+              Regular consumption of two cups of Ambala Tea every day assists in supporting your health foundation.
             </p>
           </div>
+
+
+  
           <div className="flex justify-center">
             <img
               src="/about.webp"
