@@ -56,9 +56,54 @@ export default function Home() {
       </section>
 
    
+  {/* ❤️ Mission & Values */}
+      <div className="bg-white py-16 px-6 md:px-12">
+        <div className="max-w-6xl mx-auto text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-red-900 mb-4">
+            Our Mission & Values
+          </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            We believe that good health and great taste can go hand in hand. Our mission is to create natural blends that nurture
+            your body, calm your mind, and refresh your spirit.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {[
+            {
+              title: "Purity",
+              desc: "We use only natural ingredients, free from additives or artificial flavors.",
+              icon: "🍃",
+            },
+            {
+              title: "Tradition",
+              desc: "We honor the timeless art of tea making passed down through generations.",
+              icon: "🫖",
+            },
+            {
+              title: "Wellness",
+              desc: "Each blend is crafted to boost health, energy, and inner balance.",
+              icon: "💚",
+            },
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="bg-red-50 hover:bg-red-100 transition-colors duration-300 p-8 rounded-2xl shadow-md text-center"
+            >
+              <div className="text-4xl mb-4">{item.icon}</div>
+              <h3 className="text-xl font-semibold text-red-900 mb-2">{item.title}</h3>
+              <p className="text-gray-700 text-sm leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+
+
+
       <section className="w-full py-16 px-6 md:px-16 bg-white">
         <div className="max-w-6xl mx-auto text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-maroon-700 mb-4"> Our Products </h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-red-800 mb-4"> Our Products </h2>
           <p className="text-gray-600 max-w-2xl mx-auto"> Explore our range of premium teas and wellness products designed to rejuvenate your body and calm your mind. </p>
         </div>
 
@@ -73,6 +118,23 @@ export default function Home() {
         </div>
 
       </section>
+
+
+      {/* ☕ Call to Action */}
+      <div className="relative bg-red-900 py-16 px-6 md:px-12 text-center text-white">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">Join Our Tea Journey</h2>
+        <p className="max-w-2xl mx-auto mb-8 text-gray-200">
+          Experience the purity of nature in every sip. Explore our blends and discover your new favorite tea today.
+        </p>
+        <a
+          href="/products"
+          className="inline-block bg-white text-red-900 font-semibold px-6 py-3 rounded-full shadow hover:bg-red-100 transition duration-300"
+        >
+          Explore Our Products
+        </a>
+      </div>
+
+
     </>
   );
 }
