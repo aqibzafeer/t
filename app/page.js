@@ -64,8 +64,6 @@ export default function Home() {
         </div>
       </section>
  
- 
-      {/* About Section */}
       <section className="w-full bg-gray-50 py-16 px-6 md:px-16">
 
 
