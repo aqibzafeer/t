@@ -98,9 +98,6 @@ export default function Home() {
         </div>
       </div>
 
-
-
-
       <section className="w-full py-16 px-6 md:px-16 bg-white">
         <div className="max-w-6xl mx-auto text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold text-red-800 mb-4"> Our Products </h2>
@@ -119,8 +116,6 @@ export default function Home() {
 
       </section>
 
-
-      {/* ☕ Call to Action */}
       <div className="relative bg-red-900 py-16 px-6 md:px-12 text-center text-white">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">Join Our Tea Journey</h2>
         <p className="max-w-2xl mx-auto mb-8 text-gray-200">
@@ -133,7 +128,6 @@ export default function Home() {
           Explore Our Products
         </a>
       </div>
-
 
     </>
   );
