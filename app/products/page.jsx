@@ -5,23 +5,20 @@ import Link from "next/link";
 const Products = [
   {
     id: "1",
-    name: "Masala Chai",
-    description:
-      "A rich blend of black tea and aromatic spices for an authentic Indian chai experience.",
+    name: "Ambala Tea 230 Gms",
+    short: "A rich blend of black tea and aromatic spices for an authentic Indian chai experience.",
     image: "/about.webp",
   },
   {
     id: "2",
-    name: "Green Tea",
-    description:
-      "Refreshing and light, our green tea is full of antioxidants to energize your day.",
+    name: "Ambala Tea 430 Gms",
+    short: "Refreshing and light, our green tea is full of antioxidants to energize your day.",
     image: "/about.webp",
   },
   {
     id: "3",
-    name: "Herbal Infusion",
-    description:
-      "Caffeine-free herbal blend to calm your senses and promote wellness.",
+    name: "Ambala Tea 900 Gms",
+    short: "Caffeine-free herbal blend to calm your senses and promote wellness.",
     image: "/about.webp",
   },
 ];
@@ -59,7 +56,7 @@ export default function ProductsPage() {
                   {p.name}
                 </h2>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  {p.description}
+                  {p.short}
                 </p>
               </div>
 
