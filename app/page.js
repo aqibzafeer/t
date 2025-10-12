@@ -1,5 +1,6 @@
 "use client";
 import Button from "@/components/navbar/Button";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -121,12 +122,14 @@ export default function Home() {
         <p className="max-w-2xl mx-auto mb-8 text-gray-200">
           Experience the purity of nature in every sip. Explore our blends and discover your new favorite tea today.
         </p>
-        <a
+
+        <Link
           href="/products"
           className="inline-block bg-white text-red-900 font-semibold px-6 py-3 rounded-full shadow hover:bg-red-100 transition duration-300"
         >
           Explore Our Products
-        </a>
+        </Link>
+       
       </div>
 
     </>
