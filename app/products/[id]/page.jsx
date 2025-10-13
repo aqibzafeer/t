@@ -5,9 +5,10 @@ import { PRODUCTS } from "@/app/lib/products";
 
 export default function ProductPage({ params }) {
   const { id } = params;
-  const product = Products.find((p) => p.id === id);
+  const product = PRODUCTS.find((p) => p.id === id);
 
   const [quantity, setQuantity] = useState(1);
+  const [mainImage, setMainImage] = useState(product?.image);
 
   const increaseQty = () => setQuantity((x) => x + 1);
   const decreaseQty = () => setQuantity((x) => (x > 1 ? x - 1 : 1));
@@ -23,23 +24,47 @@ export default function ProductPage({ params }) {
     );
   }
 
+  // Example: if you have multiple images, add them here
+  const images = [
+    product.image,
+    "/about-1.webp",
+    "/about-2.webp",
+    "/about-3.webp",
+  ];
+
   return (
     <section className="max-w-6xl mx-auto px-6 py-16">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        {/* Left: Image */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        {/* Left: Main Image + Thumbnails */}
         <div>
           <img
-            src={product.image}
+            src={mainImage}
             alt={product.name}
-            className="w-full rounded-xl shadow-lg object-cover"
+            className="w-full rounded-xl shadow-lg object-cover mb-4"
           />
+
+          <div className="flex gap-2">
+            {images.map((img, idx) => (
+              <button
+                key={idx}
+                onClick={() => setMainImage(img)}
+                className={`border rounded overflow-hidden ${
+                  mainImage === img ? "border-red-800" : "border-gray-300"
+                }`}
+              >
+                <img
+                  src={img}
+                  alt={`Thumbnail ${idx}`}
+                  className="w-20 h-20 object-cover hover:scale-105 transition-transform duration-200"
+                />
+              </button>
+            ))}
+          </div>
         </div>
 
-        {/* Right: Details */}
+        {/* Right: Product Details */}
         <div>
-          <h1 className="text-4xl font-bold text-emerald-900 mb-4">
-            {product.name}
-          </h1>
+          <h1 className="text-4xl font-bold text-red-900 mb-4">{product.name}</h1>
 
           <div className="mb-6">
             <p className="text-sm text-gray-500 uppercase tracking-wider mb-1">
@@ -52,12 +77,9 @@ export default function ProductPage({ params }) {
             <p className="text-sm text-gray-500 uppercase tracking-wider mb-1">
               Full Description
             </p>
-            <p className="text-gray-700 leading-relaxed">
-              {product.description}
-            </p>
+            <p className="text-gray-700 leading-relaxed">{product.description}</p>
           </div>
 
-          {/* Quantity Selector */}
           <div className="flex items-center gap-4 mb-6">
             <span className="text-sm text-gray-600">Quantity:</span>
             <div className="flex items-center border border-gray-300 rounded overflow-hidden">
@@ -77,25 +99,23 @@ export default function ProductPage({ params }) {
             </div>
           </div>
 
-          {/* Add to Cart */}
-          <button className="mt-2 bg-red-800 text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-emerald-700 transition-colors">
+          <button className="mt-2 bg-red-800 text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-red-700 transition-colors">
             Add {quantity} to Cart
           </button>
         </div>
       </div>
 
-      {/* Extra Info */}
-      <div>
-        <h2 className="text-2xl font-semibold text-red-900 mt-12 mb-4">
-          Ingredients
-        </h2>
+      {/* Ingredients */}
+      <div className="mt-12">
+        <h2 className="text-2xl font-semibold text-red-900 mb-4">Ingredients</h2>
         <p className="text-gray-700">{product.ingredients || "N/A"}</p>
+      </div>
 
-        <h2 className="text-2xl font-semibold text-red-900 mt-12 mb-4">
-          Specifications
-        </h2>
+      {/* Specifications */}
+      <div className="mt-12">
+        <h2 className="text-2xl font-semibold text-red-900 mb-4">Specifications</h2>
         <ul className="list-disc list-inside text-gray-700">
-          {product.specifications && product.specifications.length > 0 ? (
+          {product.specifications?.length > 0 ? (
             product.specifications.map((spec, index) => (
               <li key={index}>
                 <strong>{spec.key}:</strong> {spec.value}

@@ -2,32 +2,11 @@
 import { PRODUCTS } from "@/app/lib/products";
 import Link from "next/link";
 
-// const Products = [
-//   {
-//     id: "1",
-//     name: "Ambala Tea 230 Gms",
-//     short: "A rich blend of black tea and aromatic spices for an authentic Indian chai experience.",
-//     image: "/about.webp",
-//   },
-//   {
-//     id: "2",
-//     name: "Ambala Tea 430 Gms",
-//     short: "Refreshing and light, our green tea is full of antioxidants to energize your day.",
-//     image: "/about.webp",
-//   },
-//   {
-//     id: "3",
-//     name: "Ambala Tea 900 Gms",
-//     short: "Caffeine-free herbal blend to calm your senses and promote wellness.",
-//     image: "/about.webp",
-//   },
-// ];
-
 export default function ProductsPage() {
   return (
     <section className="max-w-7xl mx-auto px-6 py-16">
       <div className="text-center mb-10">
-        <h1 className="text-4xl font-bold text-emerald-800 mb-3">
+        <h1 className="text-4xl font-bold text-red-800 mb-3">
           Our Tea Collection
         </h1>
         <p className="text-gray-600 max-w-2xl mx-auto">
