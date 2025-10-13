@@ -16,17 +16,17 @@ export default function Menu({ isMobile = false, onLinkClick }) {
           {link.label}
         </NavLink>
       ))}
-      {/* <Button
+      <Button
         href={SHOP_LINK.href}
         className={isMobile ? "w-full py-3 mt-2" : ""}
         onClick={onLinkClick}
       >
         {SHOP_LINK.label}
-      </Button> */}
+      </Button>
 
-  <Button aria-label="Open cart" className={isMobile ? "w-12 py-2 mt-2" : "p-2"}>
+  {/* <Button aria-label="Open cart" className={isMobile ? "w-12 py-2 mt-2" : "p-2"}>
     <FiShoppingCart />
-  </Button>
+  </Button> */}
     </div>
   );
 }
