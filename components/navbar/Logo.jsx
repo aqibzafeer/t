@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Logo({
-  title = "LOGO",
+  title = "Ambala Tea",
   href = "/",
   imageSrc = "/logo.png",
 }) {
