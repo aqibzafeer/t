@@ -1,27 +1,27 @@
 "use client";
-
+import { PRODUCTS } from "@/app/lib/products";
 import Link from "next/link";
 
-const Products = [
-  {
-    id: "1",
-    name: "Ambala Tea 230 Gms",
-    short: "A rich blend of black tea and aromatic spices for an authentic Indian chai experience.",
-    image: "/about.webp",
-  },
-  {
-    id: "2",
-    name: "Ambala Tea 430 Gms",
-    short: "Refreshing and light, our green tea is full of antioxidants to energize your day.",
-    image: "/about.webp",
-  },
-  {
-    id: "3",
-    name: "Ambala Tea 900 Gms",
-    short: "Caffeine-free herbal blend to calm your senses and promote wellness.",
-    image: "/about.webp",
-  },
-];
+// const Products = [
+//   {
+//     id: "1",
+//     name: "Ambala Tea 230 Gms",
+//     short: "A rich blend of black tea and aromatic spices for an authentic Indian chai experience.",
+//     image: "/about.webp",
+//   },
+//   {
+//     id: "2",
+//     name: "Ambala Tea 430 Gms",
+//     short: "Refreshing and light, our green tea is full of antioxidants to energize your day.",
+//     image: "/about.webp",
+//   },
+//   {
+//     id: "3",
+//     name: "Ambala Tea 900 Gms",
+//     short: "Caffeine-free herbal blend to calm your senses and promote wellness.",
+//     image: "/about.webp",
+//   },
+// ];
 
 export default function ProductsPage() {
   return (
@@ -37,7 +37,7 @@ export default function ProductsPage() {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {Products.map((p) => (
+        {PRODUCTS.map((p) => (
           <div
             key={p.id}
             className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col"

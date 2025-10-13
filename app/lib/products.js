@@ -1,5 +1,5 @@
 // lib/products.js
-export const Products = [
+export const PRODUCTS = [
   {
     id: "1",
     name: "Ambala Tea 230 Gms",

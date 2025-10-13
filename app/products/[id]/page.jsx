@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Products } from "@/app/lib/products";
+import { PRODUCTS } from "@/app/lib/products";
 
 export default function ProductPage({ params }) {
   const { id } = params;
