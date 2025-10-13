@@ -1,17 +1,13 @@
 "use client";
-
 import React, { useState } from "react";
-import { PRODUCTS } from "@/app/lib/products";
+import { PRODUCTS } from "@/app/constants/constants";
 
 export default function ProductPage({ params }) {
-  // params is a Promise in client components in newer Next versions — unwrap it with React.use()
   const resolvedParams = React.use(params);
   const { id } = resolvedParams;
   const product = PRODUCTS.find((p) => p.id === id);
-
   const [quantity, setQuantity] = useState(1);
   const [mainImage, setMainImage] = useState(product?.image);
-
   const increaseQty = () => setQuantity((x) => x + 1);
   const decreaseQty = () => setQuantity((x) => (x > 1 ? x - 1 : 1));
 
@@ -26,7 +22,6 @@ export default function ProductPage({ params }) {
     );
   }
 
-  // Example: if you have multiple images, add them here
   const images = [
     product.image,
     "/about-1.webp",
@@ -37,13 +32,8 @@ export default function ProductPage({ params }) {
   return (
     <section className="max-w-6xl mx-auto px-6 py-16">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-        {/* Left: Main Image + Thumbnails */}
         <div>
-          <img
-            src={mainImage}
-            alt={product.name}
-            className="w-full rounded-xl shadow-lg object-cover mb-4"
-          />
+          <img            src={mainImage}            alt={product.name}            className="w-full rounded-xl shadow-lg object-cover mb-4"          />
 
           <div className="flex gap-2">
             {images.map((img, idx) => (
