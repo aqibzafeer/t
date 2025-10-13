@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import Button from "@/components/navbar/Button";
+import Button from "@/app/components/navbar/Button";
 import {  FaLeaf,  FaSpa,  FaHeart,  FaMugHot,} from "react-icons/fa";
 import { GiHerbsBundle, GiTeapot } from "react-icons/gi";
 import { MdLocalDrink } from "react-icons/md";

@@ -1,10 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { PRODUCTS } from "@/app/lib/products";
 
 export default function ProductPage({ params }) {
-  const { id } = params;
+  // params is a Promise in client components in newer Next versions — unwrap it with React.use()
+  const resolvedParams = React.use(params);
+  const { id } = resolvedParams;
   const product = PRODUCTS.find((p) => p.id === id);
 
   const [quantity, setQuantity] = useState(1);

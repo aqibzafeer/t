@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
-import Logo from "@/components/navbar/Logo";
-import MenuButton from "@/components/navbar/MenuButton";
-import Menu from "@/components/navbar/Menu";
+import Logo from "@/app/components/navbar/Logo";
+import MenuButton from "@/app/components/navbar/MenuButton";
+import Menu from "@/app/components/navbar/Menu";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

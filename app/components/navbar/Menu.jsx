@@ -1,6 +1,6 @@
 "use client";
-import NavLink from "@/components/navbar/NavLink";
-import Button from "@/components/navbar/Button";
+import NavLink from "@/app/components/navbar/NavLink";
+import Button from "@/app/components/navbar/Button";
 import { FiShoppingCart } from "react-icons/fi";
 import { NAV_LINKS, SHOP_LINK } from "@/app/constants/constants";
 
