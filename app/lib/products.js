@@ -4,6 +4,7 @@ export const PRODUCTS = [
     id: "1",
     name: "Ambala Tea 230 Gms",
     short: "A rich blend of black tea and aromatic spices",
+    price: 249,
     description:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     image: "/about.webp",
@@ -18,6 +19,7 @@ export const PRODUCTS = [
     id: "2",
     name: "Ambala Tea 430 Gms",
     short: "Refreshing and light, our green tea is full of antioxidants",
+    price: 399,
     description:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     image: "/about.webp",
@@ -32,6 +34,7 @@ export const PRODUCTS = [
     id: "3",
     name: "Ambala Tea 900 Gms",
     short: "Caffeine-free herbal blend to calm your senses",
+    price: 749,
     description:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     image: "/about.webp",

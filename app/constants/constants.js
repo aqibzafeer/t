@@ -7,7 +7,7 @@ export const NAV = [
   { href: "/contact", label: "Contact" },
 ];
 
-export const SHOP = { href: "/products", label: "Shop Now" };
+export const SHOP = { href: "/products", label: "Cart" };
 
 // Home
 import { FaLeaf, FaSpa, FaHeart, FaMugHot } from "react-icons/fa";
