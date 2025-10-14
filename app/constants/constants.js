@@ -9,7 +9,6 @@ export const NAV = [
 
 export const SHOP = { href: "/products", label: "Shop Now" };
 
-
 // Home
 import { FaLeaf, FaSpa, FaHeart, FaMugHot } from "react-icons/fa";
 import { GiHerbsBundle, GiTeapot } from "react-icons/gi";
@@ -86,6 +85,7 @@ export const PRODUCTS = [
   {
     id: "1",
     name: "Ambala Tea 230 Gms",
+    price: "400",
     short: "A rich blend of black tea and aromatic spices",
     description:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -100,9 +100,9 @@ export const PRODUCTS = [
   {
     id: "2",
     name: "Ambala Tea 430 Gms",
+    price: "790",
     short: "Refreshing and light, our green tea is full of antioxidants",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    description:      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     image: "/about.webp",
     ingredients: "Green Tea, Lemongrass, Mint, Chamomile",
     specifications: [
@@ -114,6 +114,7 @@ export const PRODUCTS = [
   {
     id: "3",
     name: "Ambala Tea 900 Gms",
+    price: "1,550",
     short: "Caffeine-free herbal blend to calm your senses",
     description:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",

@@ -54,50 +54,55 @@ export default function ProductPage({ params }) {
           </div>
         </div>
 
-        {/* Right: Product Details */}
-        <div>
-          <h1 className="text-4xl font-bold text-red-900 mb-4">{product.name}</h1>
+          <div>
+            <h1 className="text-4xl font-bold text-red-900 mb-4">{product.name}</h1>
 
-          <div className="mb-6">
-            <p className="text-sm text-gray-500 uppercase tracking-wider mb-1">
-              Short Description
-            </p>
-            <p className="text-lg text-gray-700">{product.short}</p>
-          </div>
-
-          <div className="mb-6">
-            <p className="text-sm text-gray-500 uppercase tracking-wider mb-1">
-              Full Description
-            </p>
-            <p className="text-gray-700 leading-relaxed">{product.description}</p>
-          </div>
-
-          <div className="flex items-center gap-4 mb-6">
-            <span className="text-sm text-gray-600">Quantity:</span>
-            <div className="flex items-center border border-gray-300 rounded overflow-hidden">
-              <button
-                onClick={decreaseQty}
-                className="px-3 py-1 text-lg bg-gray-100 hover:bg-gray-200"
-              >
-                −
-              </button>
-              <span className="px-4 py-1 text-md font-medium">{quantity}</span>
-              <button
-                onClick={increaseQty}
-                className="px-3 py-1 text-lg bg-gray-100 hover:bg-gray-200"
-              >
-                +
-              </button>
+            <div className="mb-6">
+              <p className="text-sm text-gray-500 uppercase tracking-wider mb-1">
+                Short Description
+              </p>
+              <p className="text-lg text-gray-700">{product.short}</p>
             </div>
+
+            <div className="mb-6">
+              <p className="text-2xl font-semibold text-red-800 mb-4">
+                Rs.{product.price}
+              </p>
+            </div>
+
+            <div className="mb-6">
+              <p className="text-sm text-gray-500 uppercase tracking-wider mb-1">
+                Full Description
+              </p>
+              <p className="text-gray-700 leading-relaxed">{product.description}</p>
+            </div>
+
+            <div className="flex items-center gap-4 mb-6">
+              <span className="text-sm text-gray-600">Quantity:</span>
+              <div className="flex items-center border border-gray-300 rounded overflow-hidden">
+                <button
+            onClick={decreaseQty}
+            className="px-3 py-1 text-lg bg-gray-100 hover:bg-gray-200"
+                >
+            −
+                </button>
+                <span className="px-4 py-1 text-md font-medium">{quantity}</span>
+                <button
+            onClick={increaseQty}
+            className="px-3 py-1 text-lg bg-gray-100 hover:bg-gray-200"
+                >
+            +
+                </button>
+              </div>
+            </div>
+
+            <button className="mt-2 bg-red-800 text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-red-700 transition-colors">
+              Add {quantity} to Cart
+            </button>
           </div>
+              </div>
 
-          <button className="mt-2 bg-red-800 text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-red-700 transition-colors">
-            Add {quantity} to Cart
-          </button>
-        </div>
-      </div>
-
-      {/* Ingredients */}
+              {/* Ingredients */}
       <div className="mt-12">
         <h2 className="text-2xl font-semibold text-red-900 mb-4">Ingredients</h2>
         <p className="text-gray-700">{product.ingredients || "N/A"}</p>

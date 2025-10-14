@@ -134,6 +134,22 @@ export default function Home() {
         </div>
       </section>
 
+
+      {/* ========== JOIN SECTION ========== */}
+      <section className="relative bg-red-900 py-16 px-6 md:px-12 text-center text-white">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 flex justify-center items-center gap-2">
+          <FaHeart /> {JOIN.title}
+        </h2>
+        <p className="max-w-2xl mx-auto mb-8 text-gray-200">{JOIN.description}</p>
+        <Link
+          href={JOIN.buttonHref}
+          className="inline-block bg-white text-red-900 font-semibold px-6 py-3 rounded-full shadow hover:bg-red-100 transition duration-300"
+        >
+          {JOIN.buttonText}
+        </Link>
+      </section>
+
+
       {/* ========== PRODUCTS PREVIEW SECTION ========== */}
       <section className="w-full py-16 px-6 md:px-16 bg-white">
         <div className="max-w-6xl mx-auto text-center mb-10">
@@ -176,35 +192,14 @@ export default function Home() {
           ))}
 
           <div className="flex flex-col justify-center items-center bg-red-50 border border-red-100 rounded-xl shadow-inner p-6 text-center">
-            <h3 className="text-xl font-semibold text-red-900 mb-3">
-              Want to see more?
-            </h3>
-            <p className="text-gray-600 text-sm mb-5">
-              Discover all our authentic blends and premium teas.
-            </p>
-            <Link
-              href="/products"
-              className="bg-red-800 text-white px-5 py-2 rounded-full font-medium hover:bg-red-700 transition-colors"
-            >
-              Show More
-            </Link>
+            <h3 className="text-xl font-semibold text-red-900 mb-3"> Want to see more? </h3>
+            <p className="text-gray-600 text-sm mb-5"> Discover all our authentic blends and premium teas. </p>
+            <Link href="/products"  className="bg-red-800 text-white px-5 py-2 rounded-full font-medium hover:bg-red-700 transition-colors"   >    Show More</Link>
           </div>
         </div>
       </section>
 
-      {/* ========== JOIN SECTION ========== */}
-      <section className="relative bg-red-900 py-16 px-6 md:px-12 text-center text-white">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 flex justify-center items-center gap-2">
-          <FaHeart /> {JOIN.title}
-        </h2>
-        <p className="max-w-2xl mx-auto mb-8 text-gray-200">{JOIN.description}</p>
-        <Link
-          href={JOIN.buttonHref}
-          className="inline-block bg-white text-red-900 font-semibold px-6 py-3 rounded-full shadow hover:bg-red-100 transition duration-300"
-        >
-          {JOIN.buttonText}
-        </Link>
-      </section>
+
     </main>
   );
 }
