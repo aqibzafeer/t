@@ -1,7 +1,7 @@
 import "./globals.css";
 import Header from "@/app/components/common/Header";
 import Footer from "@/app/components/common/Footer";
-
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata = {
   title: "Ambala",
@@ -12,6 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <Analytics/>
           <Header />
           <main className="min-h-screen">{children}</main>
           <Footer />
