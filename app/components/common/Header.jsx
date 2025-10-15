@@ -27,7 +27,6 @@ export default function Header() {
     <header className="w-full border-b border-gray-200 bg-white sticky top-0 z-50">
       <TopBar />
 
-  
       <div className="bg-red-800 flex items-center justify-between px-4 sm:px-6 py-3 lg:py-4">
         <div className="flex items-center gap-4">
           <button  onClick={() => setIsMenuOpen(!isMenuOpen)}   className="lg:hidden text-white p-2 hover:bg-red-700 rounded-md transition-colors" aria-label="Toggle menu" > {isMenuOpen ? <FaTimes size={20} /> : <FaBars size={20} />}  </button>
