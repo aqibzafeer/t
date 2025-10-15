@@ -1,11 +1,30 @@
 "use client";
 import Link from "next/link";
 
-export default function NavLink({ href, children, onClick, className = "" }) {
+export default function NavLinks({ navLinks, customerHelpLinks }) {
   return (
-    <Link href={href} onClick={onClick} className={`relative px-4 py-2 text-sm font-medium text-white hover:text-gray-300 transition-colors duration-200 group ${className}`}>
-      {children}
-      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full" />
-    </Link>
+    <nav className="hidden lg:flex justify-center gap-8 text-sm font-medium text-gray-800 py-3 border-t border-gray-100">
+      {navLinks.map((link) => ( <Link  key={link.href}   href={link.href}      className="hover:text-red-600 transition-colors" >
+          {link.label}
+        </Link>
+      ))}
+
+      <div className="relative group">
+        <button className="hover:text-red-600 transition-colors flex items-center gap-1">
+          Customer Help <span className="text-xs">▾</span>
+        </button>
+        <div className="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2 min-w-[160px] border border-gray-200 z-10">
+          {customerHelpLinks.map((link) => (
+            <Link 
+              key={link.href}
+              href={link.href} 
+              className="block px-4 py-2 hover:bg-gray-50 transition-colors"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </nav>
   );
 }
