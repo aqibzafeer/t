@@ -1,82 +1,101 @@
-// app/constants/constant.js
-
-export const NAV = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/products", label: "Products" },
-  { href: "/contact", label: "Contact" },
-];
-
-export const SHOP = { href: "/products", label: "Cart" };
-
-// Home
-import { FaLeaf, FaSpa, FaHeart, FaMugHot } from "react-icons/fa";
-import { GiHerbsBundle, GiTeapot } from "react-icons/gi";
-import { MdLocalDrink } from "react-icons/md";
-import { TbPlant } from "react-icons/tb";
+import { MdLocalDrink, MdNature, MdEco } from "react-icons/md";
+import { FaHeart, FaLeaf, FaSeedling, FaRecycle } from "react-icons/fa";
+import { GiTeapot } from "react-icons/gi";
 
 export const HERO = {
   title: "Healthy Beverage",
   description: "Our wellness journeys begin as small steps which become straightforward over time. Regular consumption of two cups of Ambala Tea every day assists in supporting your health foundation.",
   background: "/hero-section-bg.jpg",
-  buttonText: "About Us",
-  buttonHref: "/about",
+  buttonText: "Explore Our Blends",
+  buttonHref: "/products"
 };
 
 export const ABOUT = [
   {
-    title: "About Us",
-    icon: <FaLeaf className="text-red-700" />,
-    image: "/about.webp",
-    reverse: false,
-    text: `At Ambala Tea, we believe wellness starts with a single sip. Our teas are crafted
-    with nature’s finest herbs, providing the nourishment your body needs to thrive
-    every day. Regular consumption of two cups of Ambala Tea every day assists in
-    supporting your health foundation.`,
-  },
-  {
     title: "Our Story",
-    icon: <GiTeapot className="text-red-700" />,
+    text: "Founded in 2015, Herbal Teas began as a small family endeavor to share the healing power of nature. What started as a passion for traditional remedies and natural wellness quickly grew into a mission to bring authentic, high-quality herbal blends to every home. Our journey began in the lush, green hills where we carefully handpicked the finest herbs, flowers, and roots — each chosen for its unique aroma, flavor, and health benefits. With dedication and love, we transformed age-old herbal knowledge into a modern tea experience, blending tradition with innovation.",
     image: "/about.webp",
-    reverse: true,
-    text: `Our journey began with a passion for wellness and the art of brewing tea.
-    Each cup of Ambala Tea carries the warmth of tradition and the purity of
-    natural ingredients — perfect for energizing your mornings and calming your evenings.`,
+    icon: <GiTeapot className="text-red-700" />,
+    reverse: false
   },
+
+  {
+    title: "Our Process",
+    text: "Every tea leaf is handpicked at the peak of its freshness, ensuring that only the finest quality ingredients make their way into your cup. Each leaf is carefully dried using gentle, traditional methods that preserve its natural aroma, vibrant color, and rich nutrients. Our master blenders then combine these leaves with time-honored techniques, balancing flavor, fragrance, and wellness in perfect harmony. From garden to teacup, every step of our process reflects a deep respect for nature and craftsmanship.",
+    image: "/about.webp",
+    icon: <MdNature className="text-red-700" />,
+    reverse: true
+  }
 ];
 
-export const VALUES = [
-  {
-    title: "Purity",
-    desc: "We use only natural ingredients, free from additives or artificial flavors.",
-    icon: <GiHerbsBundle className="text-red-700 text-5xl mx-auto" />,
-  },
-  {
-    title: "Tradition",
-    desc: "We honor the timeless art of tea making passed down through generations.",
-    icon: <GiTeapot className="text-red-700 text-5xl mx-auto" />,
-  },
-  {
-    title: "Wellness",
-    desc: "Each blend is crafted to boost health, energy, and inner balance.",
-    icon: <FaSpa className="text-red-700 text-5xl mx-auto" />,
-  },
-];
-
-export const CATEGORIES = [
-  { name: "Green Tea", icon: <FaLeaf className="text-red-700 text-5xl" /> },
-  { name: "Black Tea", icon: <FaMugHot className="text-red-700 text-5xl" /> },
-  { name: "Herbal Tea", icon: <TbPlant className="text-red-700 text-5xl" /> },
-  { name: "Special Blend", icon: <GiTeapot className="text-red-700 text-5xl" /> },
-];
-
-export const JOIN = {
-  title: "Join Our Tea Journey",
-  description: "Experience the purity of nature in every sip. Explore our blends and discover your new favorite tea today.",
-  buttonText: "Explore Our Products",
-  buttonHref: "/products",
+export const VALUES = {
+  title: "Our Mission & Values",
+  description: "Our mission is to create natural, wholesome teas that go beyond refreshment — teas that nurture your body with real ingredients, calm your mind with soothing aromas, and uplift your spirit with every sip.",
+  icon: <FaHeart className="text-red-700" />,
+  items: [
+    {
+      title: "Natural Ingredients",
+      desc: "We source only the finest organic herbs and tea leaves, free from artificial additives and preservatives.",
+      icon: <FaLeaf className="text-3xl text-red-700 mx-auto" />
+    },
+    {
+      title: "Sustainable Farming",
+      desc: "Our partners practice eco-friendly farming methods that protect the environment and support local communities.",
+      icon: <FaSeedling className="text-3xl text-red-700 mx-auto" />
+    },
+    {
+      title: "Wellness Focused",
+      desc: "Each blend is crafted with specific wellness benefits in mind, from relaxation to energy and everything in between.",
+      icon: <FaHeart className="text-3xl text-red-700 mx-auto" />
+    },
+    {
+      title: "Eco-Friendly Packaging",
+      desc: "We're committed to reducing waste with biodegradable packaging and sustainable shipping practices.",
+      icon: <FaRecycle className="text-3xl text-red-700 mx-auto" />
+    },
+    {
+      title: "Traditional Methods",
+      desc: "We honor traditional tea-making techniques while incorporating modern quality standards for the perfect cup.",
+      icon: <GiTeapot className="text-3xl text-red-700 mx-auto" />
+    },
+    {
+      title: "Community Support",
+      desc: "We work directly with small-scale farmers, ensuring fair wages and supporting sustainable agricultural practices.",
+      icon: <MdEco className="text-3xl text-red-700 mx-auto" />
+    }
+  ]
 };
 
+export const CATEGORIES = {
+  title: "Categories",
+  description: "Explore our range of premium teas and wellness products designed to rejuvenate your body and calm your mind.",
+  icon: <MdLocalDrink className="text-red-700" />,
+  items: [
+    {
+      name: "Herbal Teas",
+      icon: <MdLocalDrink className="text-3xl text-red-700" />
+    },
+    {
+      name: "Green Teas",
+      icon: <FaLeaf className="text-3xl text-red-700" />
+    },
+    {
+      name: "Black Teas",
+      icon: <GiTeapot className="text-3xl text-red-700" />
+    },
+    {
+      name: "Wellness Blends",
+      icon: <FaHeart className="text-3xl text-red-700" />
+    }
+  ]
+};
+
+export const JOIN = {
+  title: "Join Our Tea Community",
+  description: "Be the first to know about new blends, exclusive offers, and wellness tips from our tea experts.",
+  buttonText: "Sign Up Now",
+  buttonHref: "/signup"
+};
 
 //Products
 
