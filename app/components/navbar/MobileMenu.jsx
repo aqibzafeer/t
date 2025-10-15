@@ -39,7 +39,7 @@ export default function MobileMenu({  isOpen,  navLinks,  customerHelpLinks,  on
 
         <div className="pt-2 border-t border-gray-200 flex flex-col space-y-2">
           <Link
-            href="/wishlist"
+            href="/"
             className="flex items-center gap-2 py-2 px-3 text-gray-800 hover:bg-gray-50 rounded-md transition-colors text-sm"
             onClick={onClose}
           >

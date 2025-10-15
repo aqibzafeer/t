@@ -69,7 +69,7 @@ export default function Header() {
 
           {/* Wishlist */}
           <Link
-            href="/wishlist"
+            href="/"
             className="text-white p-2 hover:text-red-300 rounded-md transition-colors hidden sm:block"
             aria-label="View wishlist" // ✅ Accessible name
           >
