@@ -149,6 +149,16 @@ export const PRODUCTS = [
 
 
 // Contact Us
+
+export const CONTACT_HERO = {
+  title: "Contact Us",
+  description: "We'd love to hear from you! Get in touch with our team for any questions or inquiries.",
+  background: "/hero-section-bg.jpg",
+  buttonText: "Get In Touch",
+  buttonHref: "#contact-form"
+};
+
+
 export const CONTACT_INFO = {
   company: "Ambala Tea Company",
   address: {
@@ -195,9 +205,9 @@ export const SEO_CONTACT = {
       postalCode: "44000",
       addressCountry: "PK",
     },
-    url: "https://yourwebsite.com",
+    url: "https://ambalatea.com",
     openingHours: "Mo-Fr 09:00-18:00",
-    priceRange: "$$",
+    priceRange: "Rs200-Rs2000",
     sameAs: [
       "https://www.facebook.com/AmbalaFoodProducts/",
       "https://www.instagram.com/ambalafoodproducts/",
