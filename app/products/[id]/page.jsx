@@ -97,7 +97,7 @@ export default function ProductPage({ params }) {
             </div>
 
             <button className="mt-2 bg-red-800 text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-red-700 transition-colors">
-              Add {quantity} to Cart
+              Add to Cart {quantity}
             </button>
           </div>
               </div>

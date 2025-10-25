@@ -25,7 +25,7 @@ export default function ProductsPage() {
 
               <div className="mt-6">
                 <Link href={`/products/${p.id}`} className="inline-block bg-red-800 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-emerald-700 transition-colors" >
-                  View Details
+                  Buy Now 
                 </Link>
               </div>
             </div>
