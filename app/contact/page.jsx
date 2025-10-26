@@ -2,8 +2,8 @@
 
 import SEOHead from "@/app/components/common/SEOHead";
 import HeroSection from "@/app/components/sections/HeroSection";
-import ContactInfoCard from "@/app/components/ContactInfoCard";
-import SocialLinks from "@/app/components/SocialLinks";
+import ContactInfoCard from "@/app/components/ui/ContactInfoCard";
+import SocialLinks from "@/app/components/ui/SocialLinks";
 import { CONTACT_INFO, SEO_CONTACT, CONTACT_HERO } from "@/app/constants/constants";
 
 export default function ContactPage() {
