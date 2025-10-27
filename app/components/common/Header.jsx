@@ -13,14 +13,14 @@ export default function Header() {
 
   const navLinks = [
     { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/products", label: "Products" },
-    { href: "/contact", label: "Contact us" },
+    { href: "/myapp/about", label: "About" },
+    { href: "/myapp/products", label: "Products" },
+    { href: "/myapp/contact", label: "Contact us" },
   ];
 
   const customerHelpLinks = [
-    { href: "/faq", label: "FAQ" },
-    { href: "/support", label: "Support" },
+    { href: "/myapp/faq", label: "FAQ" },
+    { href: "/myapp/support", label: "Support" },
   ];
 
   return (
