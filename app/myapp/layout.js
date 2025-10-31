@@ -1,4 +1,4 @@
-// app/layout.js
+// app/myapp/layout.js
 import Header from "@/app/components/common/Header";
 import Footer from "@/app/components/common/Footer";
 
@@ -7,14 +7,12 @@ export const metadata = {
   description: "Ambala Tea storefront built with Next.js",
 };
 
-export default function RootLayout({ children }) {
+export default function MyAppLayout({ children }) {
   return (
-    <html lang="en">
-      <body>
-          <Header />
-          <main className="min-h-screen">{children}</main>
-          <Footer />
-      </body>
-    </html>
+    <>
+      <Header />
+      <main className="min-h-screen">{children}</main>
+      <Footer />
+    </>
   );
 }
