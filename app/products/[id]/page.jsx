@@ -1,12 +1,15 @@
 "use client";
 import React, { useState } from "react";
-import { PRODUCTS } from "@/app/constants/constants";
+import { useProducts } from "@/app/context/ProductsContext";
+import { useCart } from "@/app/context/CartContext";
 
 export default function ProductPage({ params }) {
   const resolvedParams = React.use(params);
   const { id } = resolvedParams;
-  const product = PRODUCTS.find((p) => p.id === id);
+  const { products, getProductById } = useProducts();
+  const product = getProductById(id) || products.find((p) => p.id === id);
   const [quantity, setQuantity] = useState(1);
+  const { addItem } = useCart();
   const [mainImage, setMainImage] = useState(product?.image);
   const increaseQty = () => setQuantity((x) => x + 1);
   const decreaseQty = () => setQuantity((x) => (x > 1 ? x - 1 : 1));
@@ -96,8 +99,11 @@ export default function ProductPage({ params }) {
               </div>
             </div>
 
-            <button className="mt-2 bg-red-800 text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-red-700 transition-colors">
-              Add to Cart {quantity}
+            <button
+              onClick={() => addItem({ ...product, price: Number(product.price) || 0 }, quantity)}
+              className="mt-2 bg-red-800 text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-red-700 transition-colors"
+            >
+              Add {quantity} to Cart
             </button>
           </div>
               </div>

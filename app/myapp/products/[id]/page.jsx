@@ -1,13 +1,14 @@
 "use client";
 import React, { useState } from "react";
-import { PRODUCTS } from "@/app/constants/constants";
+import { useProducts } from "@/app/context/ProductsContext";
 import { useCart } from "@/app/context/CartContext";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 
 export default function ProductPage({ params }) {
   const resolvedParams = React.use(params);
   const { id } = resolvedParams;
-  const product = PRODUCTS.find((p) => p.id === id);
+  const { products, getProductById } = useProducts();
+  const product = getProductById(id) || products.find((p) => p.id === id);
   const { addItem } = useCart();
   
   const [quantity, setQuantity] = useState(1);

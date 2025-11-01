@@ -1,5 +1,5 @@
 "use client";
-import { PRODUCTS } from "@/app/lib/products";
+import { useProducts } from "@/app/context/ProductsContext";
 import { HERO, ABOUT, VALUES, CATEGORIES, JOIN } from "@/app/constants/constants";
 import HeroSection from "@/app/components/sections/HeroSection";
 import AboutSection from "@/app/components/sections/AboutSection";
@@ -10,6 +10,7 @@ import JoinSection from "@/app/components/sections/JoinSection";
 
 
 export default function Home() {
+  const { products } = useProducts();
   return (
     <main className="w-full">
       <HeroSection data={HERO} />
@@ -17,7 +18,7 @@ export default function Home() {
       <ValuesSection data={VALUES} />
       <CategoriesSection data={CATEGORIES} />
       <JoinSection data={JOIN} />
-      <ProductsSection products={PRODUCTS} />
+      <ProductsSection products={products} />
     </main>
   );
 }

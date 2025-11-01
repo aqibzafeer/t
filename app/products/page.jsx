@@ -1,8 +1,9 @@
 "use client";
-import { PRODUCTS } from "@/app/constants/constants";
 import Link from "next/link";
+import { useProducts } from "@/app/context/ProductsContext";
 
 export default function ProductsPage() {
+  const { products } = useProducts();
   return (
     <section className="max-w-7xl mx-auto px-6 py-16">
       <div className="text-center mb-10">
@@ -11,7 +12,7 @@ export default function ProductsPage() {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {PRODUCTS.map((p) => (
+        {products.map((p) => (
           <div key={p.id}  className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col" >
             <div className="h-56 w-full overflow-hidden">
               <img src={p.image} alt={p.name} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"/>
