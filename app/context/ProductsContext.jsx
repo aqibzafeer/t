@@ -35,10 +35,24 @@ export function ProductsProvider({ children }) {
     return normalized;
   };
 
+  const deleteProduct = (id) => {
+    // only delete custom products
+    if (!id || !String(id).startsWith("c_")) return false;
+    setCustomProducts((prev) => prev.filter((p) => p.id !== id));
+    return true;
+  };
+
+  const updateProduct = (id, updates) => {
+    // only update custom products
+    if (!id || !String(id).startsWith("c_")) return false;
+    setCustomProducts((prev) => prev.map((p) => (p.id === id ? { ...p, ...updates } : p)));
+    return true;
+  };
+
   const getProductById = (id) => products.find((p) => p.id === id);
 
   return (
-    <ProductsContext.Provider value={{ products, addProduct, getProductById, customProducts, setCustomProducts }}>
+    <ProductsContext.Provider value={{ products, addProduct, deleteProduct, updateProduct, getProductById, customProducts, setCustomProducts }}>
       {children}
     </ProductsContext.Provider>
   );
