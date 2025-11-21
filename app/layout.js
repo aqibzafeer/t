@@ -14,14 +14,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        // <AuthProvider>
+        <AuthProvider>
           <ProductsProvider>
             <CartProvider>
               <Analytics />
               <main className="min-h-screen">{children}</main>
             </CartProvider>
           </ProductsProvider>
-        // </AuthProvider>
+        </AuthProvider>
       </body>
     </html>
   );
