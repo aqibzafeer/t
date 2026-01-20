@@ -2,35 +2,17 @@
 "use client";
 
 import Link from "next/link";
-import { useAuth } from "@/app/context/AuthContext";
-import { useRouter } from "next/navigation";
-import { useState, useEffect } from "react";
-import {  FaHome,  FaBoxOpen,  FaPlusCircle,  FaCog,  FaUser,  FaSignOutAlt,  FaBars,  FaTimes,} from "react-icons/fa";
+import { useState } from "react";
+import {  FaHome,  FaBoxOpen,  FaPlusCircle,  FaBars,  FaTimes,} from "react-icons/fa";
 
 const menuItems = [
   { href: "/dashboard", icon: <FaHome />, label: "Main Dashboard" },
   { href: "/dashboard/products", icon: <FaBoxOpen />, label: "Product List" },
   { href: "/dashboard/add-product", icon: <FaPlusCircle />, label: "Add Product" },
-  { href: "/dashboard/settings", icon: <FaCog />, label: "Settings" },
-  { href: "/dashboard/profile", icon: <FaUser />, label: "Profile" },
 ];
 
 export default function DashboardLayout({ children }) {
-  const { user, logout } = useAuth();
-  const router = useRouter();
   const [collapsed, setCollapsed] = useState(false);
-
-  // Redirect if not logged in
-  useEffect(() => {
-    if (!user) router.push("/login");
-  }, [user, router]);
-
-  const handleLogout = async () => {
-    await logout();
-    router.push("/login");
-  };
-
-  if (!user) return null;
 
   return (
     <div className="flex min-h-screen bg-gray-100">
@@ -48,14 +30,6 @@ export default function DashboardLayout({ children }) {
         <nav className="flex flex-col space-y-3 flex-1">
           {menuItems.map((item) => ( <SidebarLink   key={item.href} href={item.href} icon={item.icon} label={item.label} collapsed={collapsed}/> ))}
         </nav>
-
-        <button
-          onClick={handleLogout}
-          className="mt-auto flex items-center space-x-2 px-3 py-2 rounded-lg bg-red-500 hover:bg-red-300 transition"
-        >
-          <FaSignOutAlt />
-          {!collapsed && <span>Logout</span>}
-        </button>
       </aside>
 
       {/* Main */}

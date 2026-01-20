@@ -1,6 +1,5 @@
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
-import { AuthProvider } from "@/app/context/AuthContext";
 import { CartProvider } from "@/app/context/CartContext";
 import { ProductsProvider } from "@/app/context/ProductsContext";
 
@@ -14,14 +13,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <AuthProvider>
-          <ProductsProvider>
-            <CartProvider>
-              <Analytics />
-              <main className="min-h-screen">{children}</main>
-            </CartProvider>
-          </ProductsProvider>
-        </AuthProvider>
+        <ProductsProvider>
+          <CartProvider>
+            <Analytics />
+            <main className="min-h-screen">{children}</main>
+          </CartProvider>
+        </ProductsProvider>
       </body>
     </html>
   );
